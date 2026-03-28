@@ -1,0 +1,14 @@
+{
+  "title": "Giai bai tap Python",
+  "summary": "Chương trình thực hiện các bài toán cơ bản với số nguyên và chuỗi ký tự, bao gồm tính tổng, tích, hiệu, phép chia, và tính toán hình tròn.",
+  "explanation": "Chương trình này bao gồm 5 bài tập khác nhau, mỗi bài tập sẽ yêu cầu người dùng nhập dữ liệu và thực hiện các phép toán tương ứng.",
+  "code": "def bai_1():\n    a = int(input('Nhap so nguyen a: '))\n    b = int(input('Nhap so nguyen b: '))\n    tong = a + b\n    print('Tong hai so:', tong)\n\n\ndef bai_2():\n    chuoi = input('Nhap chuoi ky tu: ')\n    print('Chuoi ky tu:', chuoi)\n\n\ndef bai_3():\n    a = int(input('Nhap so nguyen a: '))\n    b = int(input('Nhap so nguyen b: '))\n    c = int(input('Nhap so nguyen c: '))\n    tong = a + b + c\n    tich = a * b * c\n    print('Tong:', tong)\n    print('Tich:', tich)\n    hieu_ab = a - b\n    hieu_ac = a - c\n    hieu_bc = b - c\n    print('Hieu a-b:', hieu_ab)\n    print('Hieu a-c:', hieu_ac)\n    print('Hieu b-c:', hieu_bc)\n    if b != 0:\n        chia_ab = a // b\n        chia_ac = a // c\n        chia_bc = b // c\n        print('Chia a/b:', chia_ab)\n        print('Chia a/c:', chia_ac)\n        print('Chia b/c:', chia_bc)\n    else:\n        print('Khong the chia cho 0')\n\n\ndef bai_4():\n    chuoi1 = input('Nhap chuoi 1: ')\n    chuoi2 = input('Nhap chuoi 2: ')\n    chuoi3 = input('Nhap chuoi 3: ')\n    ket_qua = chuoi1 + ' ' + chuoi2 + ' ' + chuoi3\n    print('Ket qua:', ket_qua)\n\n\ndef bai_5():\n    import math\n    R = float(input('Nhap ban kinh R: '))\n    CV = 2 * R * math.pi\n    DT = math.pi * R * R\n    print('Chu vi:', CV)\n    print('Dien tich:', DT)\n\n\nif __name__ == '__main__':\n    bai_1()\n    bai_2()\n    bai_3()\n    bai_4()\n    bai_5()",
+  "sample_run": "Nhap so nguyen a: 5\nNhap so nguyen b: 10\nTong hai so: 15\nNhap chuoi ky tu: Hello\nChuoi ky tu: Hello\nNhap so nguyen a: 1\nNhap so nguyen b: 2\nNhap so nguyen c: 3\nTong: 6\nTich: 6\nHieu a-b: -1\nHieu a-c: -2\nHieu b-c: -1\nNhap chuoi 1: Nguyen\nNhap chuoi 2: Van\nNhap chuoi 3: Minh\nKet qua: Nguyen Van Minh\nNhap ban kinh R: 5\nChu vi: 31.41592653589793\nDien tich: 78.53981633974483",
+  "notes": [
+    "Bài 1: Tính tổng hai số nguyên.",
+    "Bài 2: In ra chuỗi ký tự nhập vào.",
+    "Bài 3: Tính tổng, tích, hiệu và phép chia của ba số nguyên.",
+    "Bài 4: Ghép ba chuỗi ký tự thành một chuỗi.",
+    "Bài 5: Tính chu vi và diện tích hình tròn."
+  ]
+}
