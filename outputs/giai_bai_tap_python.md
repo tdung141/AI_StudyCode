@@ -2,24 +2,23 @@
 
 ## Tom tat
 
-Chương trình kiểm tra số chẵn/lẻ, kiểm tra độ dài ba cạnh tam giác và tính tuổi từ năm sinh.
+Bài 4 kiểm tra số nguyên dương chia hết cho 2 hoặc 3. Bài 5 giải phương trình bậc 2.
 
 ## Giai thich
 
-Chương trình này bao gồm ba bài tập: Bài 1 kiểm tra số chẵn hay lẻ, Bài 2 kiểm tra xem ba số có thể tạo thành tam giác hay không, và Bài 3 tính tuổi dựa trên năm sinh.
+Bài 4 yêu cầu nhập một số nguyên dương và kiểm tra xem nó có chia hết cho 2 hoặc 3 hay không. Bài 5 yêu cầu giải phương trình bậc 2 với các tham số a, b, c được nhập từ bàn phím.
 
 ## Vi du chay
 
-Nhap vao mot so nguyen duong: 5
-Day la mot so le
-Nhap vao so nguyen duong a: 3
-Nhap vao so nguyen duong b: 4
-Nhap vao so nguyen duong c: 5
-Do dai ba canh tam giac
-Nhap vao nam sinh: 1990
-Nam sinh 1990, vay ban 28 tuoi
+Nhap mot so nguyen duong: 6
+6 chia het cho 2
+6 chia het cho 3
+Nhap a: 1
+Nhap b: -3
+Nhap c: 2
+Phuong trinh co 2 nghiem: x1 = 2.0, x2 = 1.0
 
 ## Ghi chu
 
-- Chương trình yêu cầu nhập dữ liệu từ người dùng.
-- Cần kiểm tra các điều kiện đầu vào để đảm bảo tính hợp lệ.
+- Bài 4 kiểm tra số nguyên dương
+- Bài 5 giải phương trình bậc 2

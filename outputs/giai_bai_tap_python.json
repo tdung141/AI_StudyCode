@@ -1,11 +1,11 @@
 {
   "title": "Giai bai tap Python",
-  "summary": "Chương trình kiểm tra số chẵn/lẻ, kiểm tra độ dài ba cạnh tam giác và tính tuổi từ năm sinh.",
-  "explanation": "Chương trình này bao gồm ba bài tập: Bài 1 kiểm tra số chẵn hay lẻ, Bài 2 kiểm tra xem ba số có thể tạo thành tam giác hay không, và Bài 3 tính tuổi dựa trên năm sinh.",
-  "code": "def bai_1():\n    n = int(input('Nhap vao mot so nguyen duong: '))\n    if n % 2 == 0:\n        print('Day la mot so chan')\n    else:\n        print('Day la mot so le')\n\n\ndef bai_2():\n    a = int(input('Nhap vao so nguyen duong a: '))\n    b = int(input('Nhap vao so nguyen duong b: '))\n    c = int(input('Nhap vao so nguyen duong c: '))\n    if a + b > c and a + c > b and b + c > a:\n        print('Do dai ba canh tam giac')\n    else:\n        print('Day khong phai do dai ba canh tam giac')\n\n\ndef bai_3():\n    nam_sinh = int(input('Nhap vao nam sinh: '))\n    from datetime import datetime\n    nam_hien_tai = datetime.now().year\n    tuoi = nam_hien_tai - nam_sinh\n    print(f'Nam sinh {nam_sinh}, vay ban {tuoi} tuoi')\n\n\nif __name__ == '__main__':\n    bai_1()\n    bai_2()\n    bai_3()",
-  "sample_run": "Nhap vao mot so nguyen duong: 5\nDay la mot so le\nNhap vao so nguyen duong a: 3\nNhap vao so nguyen duong b: 4\nNhap vao so nguyen duong c: 5\nDo dai ba canh tam giac\nNhap vao nam sinh: 1990\nNam sinh 1990, vay ban 28 tuoi",
+  "summary": "Bài 4 kiểm tra số nguyên dương chia hết cho 2 hoặc 3. Bài 5 giải phương trình bậc 2.",
+  "explanation": "Bài 4 yêu cầu nhập một số nguyên dương và kiểm tra xem nó có chia hết cho 2 hoặc 3 hay không. Bài 5 yêu cầu giải phương trình bậc 2 với các tham số a, b, c được nhập từ bàn phím.",
+  "code": "def kiem_tra_chia_het():\n    so = int(input('Nhap mot so nguyen duong: '))\n    if so <= 0:\n        return 'Vui long nhap so nguyen duong!'\n    if so % 2 == 0:\n        print(f'{so} chia het cho 2')\n    if so % 3 == 0:\n        print(f'{so} chia het cho 3')\n    if so % 2 != 0 and so % 3 != 0:\n        print(f'{so} khong chia het cho 2 hay 3')\n\nkiem_tra_chia_het()\n\nimport math\n\ndef giai_phuong_trinh_bac_2():\n    a = float(input('Nhap a: '))\n    b = float(input('Nhap b: '))\n    c = float(input('Nhap c: '))\n    if a == 0:\n        return 'a phai khac 0!'\n    delta = b**2 - 4*a*c\n    if delta < 0:\n        return 'Phuong trinh vo nghiem'\n    elif delta == 0:\n        x = -b / (2*a)\n        print(f'Phuong trinh co nghiem kep: x = {x}')\n    else:\n        x1 = (-b + math.sqrt(delta)) / (2*a)\n        x2 = (-b - math.sqrt(delta)) / (2*a)\n        print(f'Phuong trinh co 2 nghiem: x1 = {x1}, x2 = {x2}')\n\ngiai_phuong_trinh_bac_2()",
+  "sample_run": "Nhap mot so nguyen duong: 6\n6 chia het cho 2\n6 chia het cho 3\nNhap a: 1\nNhap b: -3\nNhap c: 2\nPhuong trinh co 2 nghiem: x1 = 2.0, x2 = 1.0",
   "notes": [
-    "Chương trình yêu cầu nhập dữ liệu từ người dùng.",
-    "Cần kiểm tra các điều kiện đầu vào để đảm bảo tính hợp lệ."
+    "Bài 4 kiểm tra số nguyên dương",
+    "Bài 5 giải phương trình bậc 2"
   ]
 }

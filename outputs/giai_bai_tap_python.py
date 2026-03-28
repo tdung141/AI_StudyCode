@@ -1,30 +1,33 @@
-def bai_1():
-    n = int(input('Nhap vao mot so nguyen duong: '))
-    if n % 2 == 0:
-        print('Day la mot so chan')
+def kiem_tra_chia_het():
+    so = int(input('Nhap mot so nguyen duong: '))
+    if so <= 0:
+        return 'Vui long nhap so nguyen duong!'
+    if so % 2 == 0:
+        print(f'{so} chia het cho 2')
+    if so % 3 == 0:
+        print(f'{so} chia het cho 3')
+    if so % 2 != 0 and so % 3 != 0:
+        print(f'{so} khong chia het cho 2 hay 3')
+
+kiem_tra_chia_het()
+
+import math
+
+def giai_phuong_trinh_bac_2():
+    a = float(input('Nhap a: '))
+    b = float(input('Nhap b: '))
+    c = float(input('Nhap c: '))
+    if a == 0:
+        return 'a phai khac 0!'
+    delta = b**2 - 4*a*c
+    if delta < 0:
+        return 'Phuong trinh vo nghiem'
+    elif delta == 0:
+        x = -b / (2*a)
+        print(f'Phuong trinh co nghiem kep: x = {x}')
     else:
-        print('Day la mot so le')
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+        print(f'Phuong trinh co 2 nghiem: x1 = {x1}, x2 = {x2}')
 
-
-def bai_2():
-    a = int(input('Nhap vao so nguyen duong a: '))
-    b = int(input('Nhap vao so nguyen duong b: '))
-    c = int(input('Nhap vao so nguyen duong c: '))
-    if a + b > c and a + c > b and b + c > a:
-        print('Do dai ba canh tam giac')
-    else:
-        print('Day khong phai do dai ba canh tam giac')
-
-
-def bai_3():
-    nam_sinh = int(input('Nhap vao nam sinh: '))
-    from datetime import datetime
-    nam_hien_tai = datetime.now().year
-    tuoi = nam_hien_tai - nam_sinh
-    print(f'Nam sinh {nam_sinh}, vay ban {tuoi} tuoi')
-
-
-if __name__ == '__main__':
-    bai_1()
-    bai_2()
-    bai_3()
+giai_phuong_trinh_bac_2()
