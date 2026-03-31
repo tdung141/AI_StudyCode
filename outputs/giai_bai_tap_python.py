@@ -1,33 +1,40 @@
-def kiem_tra_chia_het():
-    so = int(input('Nhap mot so nguyen duong: '))
-    if so <= 0:
-        return 'Vui long nhap so nguyen duong!'
-    if so % 2 == 0:
-        print(f'{so} chia het cho 2')
-    if so % 3 == 0:
-        print(f'{so} chia het cho 3')
-    if so % 2 != 0 and so % 3 != 0:
-        print(f'{so} khong chia het cho 2 hay 3')
+def bai_1():
+    product = 1
+    for i in range(1, 11):
+        product *= i
+    print('Tích của 10 số tự nhiên đầu tiên là:', product)
 
-kiem_tra_chia_het()
 
-import math
+def bai_2():
+    n = int(input('Nhập vào số nguyên dương n: '))
+    if n < 0:
+        print('Vui lòng nhập số nguyên dương!')
+        return
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+    print(f'{n}! =', factorial)
 
-def giai_phuong_trinh_bac_2():
-    a = float(input('Nhap a: '))
-    b = float(input('Nhap b: '))
-    c = float(input('Nhap c: '))
-    if a == 0:
-        return 'a phai khac 0!'
-    delta = b**2 - 4*a*c
-    if delta < 0:
-        return 'Phuong trinh vo nghiem'
-    elif delta == 0:
-        x = -b / (2*a)
-        print(f'Phuong trinh co nghiem kep: x = {x}')
-    else:
-        x1 = (-b + math.sqrt(delta)) / (2*a)
-        x2 = (-b - math.sqrt(delta)) / (2*a)
-        print(f'Phuong trinh co 2 nghiem: x1 = {x1}, x2 = {x2}')
 
-giai_phuong_trinh_bac_2()
+def bai_3():
+    n = int(input('Nhập vào số nguyên dương n: '))
+    if n < 2:
+        print('Không phải số nguyên tố.')
+        return
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            print('Không phải số nguyên tố.')
+            return
+    print('Đây là số nguyên tố.')
+
+
+def bai_4():
+    n = int(input('Nhập vào số nguyên n: '))
+    total = sum(i for i in range(n) if i % 2 == 0)
+    print('Tổng các số chẵn nhỏ hơn', n, 'là:', total)
+
+
+bai_1()
+bai_2()
+bai_3()
+bai_4()

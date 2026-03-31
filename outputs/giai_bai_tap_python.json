@@ -1,11 +1,13 @@
 {
   "title": "Giai bai tap Python",
-  "summary": "Bài 4 kiểm tra số nguyên dương chia hết cho 2 hoặc 3. Bài 5 giải phương trình bậc 2.",
-  "explanation": "Bài 4 yêu cầu nhập một số nguyên dương và kiểm tra xem nó có chia hết cho 2 hoặc 3 hay không. Bài 5 yêu cầu giải phương trình bậc 2 với các tham số a, b, c được nhập từ bàn phím.",
-  "code": "def kiem_tra_chia_het():\n    so = int(input('Nhap mot so nguyen duong: '))\n    if so <= 0:\n        return 'Vui long nhap so nguyen duong!'\n    if so % 2 == 0:\n        print(f'{so} chia het cho 2')\n    if so % 3 == 0:\n        print(f'{so} chia het cho 3')\n    if so % 2 != 0 and so % 3 != 0:\n        print(f'{so} khong chia het cho 2 hay 3')\n\nkiem_tra_chia_het()\n\nimport math\n\ndef giai_phuong_trinh_bac_2():\n    a = float(input('Nhap a: '))\n    b = float(input('Nhap b: '))\n    c = float(input('Nhap c: '))\n    if a == 0:\n        return 'a phai khac 0!'\n    delta = b**2 - 4*a*c\n    if delta < 0:\n        return 'Phuong trinh vo nghiem'\n    elif delta == 0:\n        x = -b / (2*a)\n        print(f'Phuong trinh co nghiem kep: x = {x}')\n    else:\n        x1 = (-b + math.sqrt(delta)) / (2*a)\n        x2 = (-b - math.sqrt(delta)) / (2*a)\n        print(f'Phuong trinh co 2 nghiem: x1 = {x1}, x2 = {x2}')\n\ngiai_phuong_trinh_bac_2()",
-  "sample_run": "Nhap mot so nguyen duong: 6\n6 chia het cho 2\n6 chia het cho 3\nNhap a: 1\nNhap b: -3\nNhap c: 2\nPhuong trinh co 2 nghiem: x1 = 2.0, x2 = 1.0",
+  "summary": "Bài 1 tính tích 10 số tự nhiên đầu tiên, Bài 2 tính giai thừa của n, Bài 3 kiểm tra số nguyên tố, Bài 4 tính tổng số chẵn nhỏ hơn n.",
+  "explanation": "Mỗi bài tập sẽ được giải thích và thực hiện bằng code Python. Bài 1 tính tích của 10 số tự nhiên đầu tiên, Bài 2 yêu cầu người dùng nhập số và tính giai thừa, Bài 3 kiểm tra tính nguyên tố của số, Bài 4 tính tổng các số chẵn nhỏ hơn n.",
+  "code": "def bai_1():\n    product = 1\n    for i in range(1, 11):\n        product *= i\n    print('Tích của 10 số tự nhiên đầu tiên là:', product)\n\n\ndef bai_2():\n    n = int(input('Nhập vào số nguyên dương n: '))\n    if n < 0:\n        print('Vui lòng nhập số nguyên dương!')\n        return\n    factorial = 1\n    for i in range(1, n + 1):\n        factorial *= i\n    print(f'{n}! =', factorial)\n\n\ndef bai_3():\n    n = int(input('Nhập vào số nguyên dương n: '))\n    if n < 2:\n        print('Không phải số nguyên tố.')\n        return\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            print('Không phải số nguyên tố.')\n            return\n    print('Đây là số nguyên tố.')\n\n\ndef bai_4():\n    n = int(input('Nhập vào số nguyên n: '))\n    total = sum(i for i in range(n) if i % 2 == 0)\n    print('Tổng các số chẵn nhỏ hơn', n, 'là:', total)\n\n\nbai_1()\nbai_2()\nbai_3()\nbai_4()",
+  "sample_run": "Ví dụ chạy:\nNhập vào số nguyên dương n: 5\n5! = 120\nNhập vào số nguyên n: 10\nTổng các số chẵn nhỏ hơn 10 là: 20",
   "notes": [
-    "Bài 4 kiểm tra số nguyên dương",
-    "Bài 5 giải phương trình bậc 2"
+    "Bài 1: Tích của 10 số tự nhiên đầu tiên.",
+    "Bài 2: Giai thừa chỉ tính cho số nguyên dương.",
+    "Bài 3: Số nguyên tố là số lớn hơn 1 không chia hết cho số nào khác ngoài 1 và chính nó.",
+    "Bài 4: Tổng các số chẵn nhỏ hơn n."
   ]
 }
