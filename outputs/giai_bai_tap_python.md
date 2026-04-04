@@ -2,23 +2,17 @@
 
 ## Tom tat
 
-Bài 1 tính tích 10 số tự nhiên đầu tiên, Bài 2 tính giai thừa của n, Bài 3 kiểm tra số nguyên tố, Bài 4 tính tổng số chẵn nhỏ hơn n.
+Chương trình thực hiện các phép toán cơ bản như tính tổng, kiểm tra số nguyên tố, và số hoàn hảo trong khoảng cho trước.
 
 ## Giai thich
 
-Mỗi bài tập sẽ được giải thích và thực hiện bằng code Python. Bài 1 tính tích của 10 số tự nhiên đầu tiên, Bài 2 yêu cầu người dùng nhập số và tính giai thừa, Bài 3 kiểm tra tính nguyên tố của số, Bài 4 tính tổng các số chẵn nhỏ hơn n.
+Chương trình bao gồm các hàm để tính tổng hai số, tổng nhiều số, kiểm tra số nguyên tố, tìm số nguyên tố trong khoảng, kiểm tra số hoàn hảo, và tìm số hoàn hảo trong khoảng. Cuối cùng, có một menu cho phép người dùng chọn thực hiện các chức năng này.
 
 ## Vi du chay
 
-Ví dụ chạy:
-Nhập vào số nguyên dương n: 5
-5! = 120
-Nhập vào số nguyên n: 10
-Tổng các số chẵn nhỏ hơn 10 là: 20
+Chạy chương trình và chọn các chức năng để thực hiện.
 
 ## Ghi chu
 
-- Bài 1: Tích của 10 số tự nhiên đầu tiên.
-- Bài 2: Giai thừa chỉ tính cho số nguyên dương.
-- Bài 3: Số nguyên tố là số lớn hơn 1 không chia hết cho số nào khác ngoài 1 và chính nó.
-- Bài 4: Tổng các số chẵn nhỏ hơn n.
+- Chương trình có menu cho người dùng
+- Kiểm tra hợp lệ các đầu vào
