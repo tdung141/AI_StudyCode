@@ -2,17 +2,17 @@
 
 ## Tom tat
 
-Chương trình thực hiện các phép toán cơ bản như tính tổng, kiểm tra số nguyên tố, và số hoàn hảo trong khoảng cho trước.
+Chương trình bao gồm các hàm tính tổng, kiểm tra số nguyên tố, kiểm tra số hoàn hảo và tìm các số nguyên tố, số hoàn hảo trong khoảng cho trước.
 
 ## Giai thich
 
-Chương trình bao gồm các hàm để tính tổng hai số, tổng nhiều số, kiểm tra số nguyên tố, tìm số nguyên tố trong khoảng, kiểm tra số hoàn hảo, và tìm số hoàn hảo trong khoảng. Cuối cùng, có một menu cho phép người dùng chọn thực hiện các chức năng này.
+Chương trình này bao gồm nhiều hàm để thực hiện các phép toán và kiểm tra số học cơ bản. Người dùng có thể chọn thực hiện từng hàm thông qua menu.
 
 ## Vi du chay
 
-Chạy chương trình và chọn các chức năng để thực hiện.
+Chạy chương trình và chọn các chức năng từ menu.
 
 ## Ghi chu
 
-- Chương trình có menu cho người dùng
-- Kiểm tra hợp lệ các đầu vào
+- Chương trình có thể mở rộng thêm các chức năng khác.
+- Kiểm tra kỹ các đầu vào để tránh lỗi.
