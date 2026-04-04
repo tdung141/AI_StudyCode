@@ -1,67 +1,32 @@
-def tong_hai_so(a, b):
-    return a + b
-
-def tong_cac_so(*args):
-    return sum(args)
-
-
-def kiem_tra_so_nguyen_to(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+def save_personal_info():
+    name = input('Nhap ten: ')
+    age = input('Nhap tuoi: ')
+    email = input('Nhap email: ')
+    skype = input('Nhap skype: ')
+    address = input('Nhap dia chi: ')
+    workplace = input('Nhap noi lam viec: ')
+    with open('setInfo.txt', 'w') as f:
+        f.write(f'Ten: {name}\nTuoi: {age}\nEmail: {email}\nSkype: {skype}\nDia chi: {address}\nNoi lam viec: {workplace}')
 
 
-def tim_so_nguyen_to(a, b):
-    return [x for x in range(a, b + 1) if kiem_tra_so_nguyen_to(x)]
+def read_personal_info():
+    with open('setInfo.txt', 'r') as f:
+        content = f.read()
+    print(content)
 
 
-def kiem_tra_so_hoan_hao(n):
-    return n == sum(i for i in range(1, n) if n % i == 0)
+def count_words_in_file():
+    with open('demo_file2.txt', 'r') as f:
+        text = f.read()
+    words = text.split()
+    word_count = {}
+    for word in words:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
 
 
-def tim_so_hoan_hao(a, b):
-    return [x for x in range(a, b + 1) if kiem_tra_so_hoan_hao(x)]
-
-
-def menu():
-    while True:
-        print('\nMenu:')
-        print('1. Tính tổng 2 số')
-        print('2. Tính tổng các số')
-        print('3. Kiểm tra số nguyên tố')
-        print('4. Tìm số nguyên tố trong khoảng')
-        print('5. Kiểm tra số hoàn hảo')
-        print('6. Tìm số hoàn hảo trong khoảng')
-        print('0. Thoát')
-        choice = input('Chọn chức năng: ')
-
-        if choice == '1':
-            a = int(input('Nhập số thứ nhất: '))
-            b = int(input('Nhập số thứ hai: '))
-            print('Tổng:', tong_hai_so(a, b))
-        elif choice == '2':
-            nums = list(map(int, input('Nhập các số cách nhau bởi dấu phẩy: ').split(',')))
-            print('Tổng:', tong_cac_so(*nums))
-        elif choice == '3':
-            n = int(input('Nhập số cần kiểm tra: '))
-            print('Số nguyên tố' if kiem_tra_so_nguyen_to(n) else 'Không phải số nguyên tố')
-        elif choice == '4':
-            a = int(input('Nhập a: '))
-            b = int(input('Nhập b: '))
-            print('Các số nguyên tố trong khoảng:', tim_so_nguyen_to(a, b))
-        elif choice == '5':
-            n = int(input('Nhập số cần kiểm tra: '))
-            print('Số hoàn hảo' if kiem_tra_so_hoan_hao(n) else 'Không phải số hoàn hảo')
-        elif choice == '6':
-            a = int(input('Nhập a: '))
-            b = int(input('Nhập b: '))
-            print('Các số hoàn hảo trong khoảng:', tim_so_hoan_hao(a, b))
-        elif choice == '0':
-            break
-        else:
-            print('Lựa chọn không hợp lệ!')
-
-menu()
+# Gọi các hàm
+save_personal_info()
+read_personal_info()
+word_count_result = count_words_in_file()
+print(word_count_result)
