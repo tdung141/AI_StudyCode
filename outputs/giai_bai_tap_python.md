@@ -2,20 +2,18 @@
 
 ## Tom tat
 
-Bài 1 thêm phần tử vào tuple, Bài 2 loại bỏ phần tử giống nhau, Bài 3 loại bỏ trùng lặp trong tuple.
+Chương trình mã hóa và giải mã văn bản dựa vào bảng mã được quy định.
 
 ## Giai thich
 
-Bài 1 sử dụng phép nối tuple để thêm phần tử. Bài 2 và Bài 3 sử dụng hàm count để xử lý các phần tử trong tuple.
+Chương trình này cho phép người dùng mã hóa và giải mã một văn bản bằng cách sử dụng một từ điển quy định các ký tự tương ứng.
 
 ## Vi du chay
 
-_new_tuple = ('a', 'c', 'd', 'e')
-_new_tuple_2 = ('b', 'c', 'd')
-_new_tuple_3 = ('ab', 'b', 'e', 'c', 'd')
+Văn bản mã hóa: !@#$e
+Văn bản giải mã: abcde
 
 ## Ghi chu
 
-- Bài 1: Thêm phần tử vào tuple
-- Bài 2: Loại bỏ phần tử giống nhau
-- Bài 3: Loại bỏ trùng lặp nhưng giữ thứ tự
+- Chương trình hỗ trợ mã hóa và giải mã.
+- Tránh chia cho 0 trong các phép toán khác.

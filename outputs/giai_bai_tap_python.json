@@ -1,12 +1,11 @@
 {
   "title": "Giai bai tap Python",
-  "summary": "Bài 1 thêm phần tử vào tuple, Bài 2 loại bỏ phần tử giống nhau, Bài 3 loại bỏ trùng lặp trong tuple.",
-  "explanation": "Bài 1 sử dụng phép nối tuple để thêm phần tử. Bài 2 và Bài 3 sử dụng hàm count để xử lý các phần tử trong tuple.",
-  "code": "def add_element_to_tuple(_tuple, element, position):\n    new_tuple = _tuple[:position] + (element,) + _tuple[position:]\n    return new_tuple\n\n_tuple = ('a', 'b', 'd', 'e')\n_new_tuple = add_element_to_tuple(_tuple, 'c', 2)\n\n\ndef remove_duplicates(_tuple):\n    new_tuple = tuple(x for x in _tuple if _tuple.count(x) == 1)\n    return new_tuple\n\n_tuple = ('ab', 'b', 'e', 'c', 'd', 'e', 'ab')\n_new_tuple_2 = remove_duplicates(_tuple)\n\n\ndef remove_duplicates_keep_order(_tuple):\n    seen = set()\n    new_tuple = []\n    for item in _tuple:\n        if item not in seen:\n            seen.add(item)\n            new_tuple.append(item)\n    return tuple(new_tuple)\n\n_new_tuple_3 = remove_duplicates_keep_order(_tuple)",
-  "sample_run": "_new_tuple = ('a', 'c', 'd', 'e')\n_new_tuple_2 = ('b', 'c', 'd')\n_new_tuple_3 = ('ab', 'b', 'e', 'c', 'd')",
+  "summary": "Chương trình mã hóa và giải mã văn bản dựa vào bảng mã được quy định.",
+  "explanation": "Chương trình này cho phép người dùng mã hóa và giải mã một văn bản bằng cách sử dụng một từ điển quy định các ký tự tương ứng.",
+  "code": "def ma_hoa(van_ban, bang_ma):\n    return ''.join(bang_ma.get(char, char) for char in van_ban)\n\ndef giai_ma(van_ban_ma, bang_ma):\n    nguoc_bang_ma = {v: k for k, v in bang_ma.items()}\n    return ''.join(nguoc_bang_ma.get(char, char) for char in van_ban_ma)\n\n# Ví dụ sử dụng\nbang_ma = {'a': '!', 'b': '@', 'c': '#', 'd': '$'}\nvan_ban = 'abcde'\nvan_ban_ma = ma_hoa(van_ban, bang_ma)\nprint('Văn bản mã hóa:', van_ban_ma)\nvan_ban_giai_ma = giai_ma(van_ban_ma, bang_ma)\nprint('Văn bản giải mã:', van_ban_giai_ma)",
+  "sample_run": "Văn bản mã hóa: !@#$e\nVăn bản giải mã: abcde",
   "notes": [
-    "Bài 1: Thêm phần tử vào tuple",
-    "Bài 2: Loại bỏ phần tử giống nhau",
-    "Bài 3: Loại bỏ trùng lặp nhưng giữ thứ tự"
+    "Chương trình hỗ trợ mã hóa và giải mã.",
+    "Tránh chia cho 0 trong các phép toán khác."
   ]
 }

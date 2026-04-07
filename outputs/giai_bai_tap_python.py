@@ -1,26 +1,14 @@
-def add_element_to_tuple(_tuple, element, position):
-    new_tuple = _tuple[:position] + (element,) + _tuple[position:]
-    return new_tuple
+def ma_hoa(van_ban, bang_ma):
+    return ''.join(bang_ma.get(char, char) for char in van_ban)
 
-_tuple = ('a', 'b', 'd', 'e')
-_new_tuple = add_element_to_tuple(_tuple, 'c', 2)
+def giai_ma(van_ban_ma, bang_ma):
+    nguoc_bang_ma = {v: k for k, v in bang_ma.items()}
+    return ''.join(nguoc_bang_ma.get(char, char) for char in van_ban_ma)
 
-
-def remove_duplicates(_tuple):
-    new_tuple = tuple(x for x in _tuple if _tuple.count(x) == 1)
-    return new_tuple
-
-_tuple = ('ab', 'b', 'e', 'c', 'd', 'e', 'ab')
-_new_tuple_2 = remove_duplicates(_tuple)
-
-
-def remove_duplicates_keep_order(_tuple):
-    seen = set()
-    new_tuple = []
-    for item in _tuple:
-        if item not in seen:
-            seen.add(item)
-            new_tuple.append(item)
-    return tuple(new_tuple)
-
-_new_tuple_3 = remove_duplicates_keep_order(_tuple)
+# Ví dụ sử dụng
+bang_ma = {'a': '!', 'b': '@', 'c': '#', 'd': '$'}
+van_ban = 'abcde'
+van_ban_ma = ma_hoa(van_ban, bang_ma)
+print('Văn bản mã hóa:', van_ban_ma)
+van_ban_giai_ma = giai_ma(van_ban_ma, bang_ma)
+print('Văn bản giải mã:', van_ban_giai_ma)
