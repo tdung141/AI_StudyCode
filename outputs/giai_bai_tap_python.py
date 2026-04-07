@@ -1,32 +1,26 @@
-def save_personal_info():
-    name = input('Nhap ten: ')
-    age = input('Nhap tuoi: ')
-    email = input('Nhap email: ')
-    skype = input('Nhap skype: ')
-    address = input('Nhap dia chi: ')
-    workplace = input('Nhap noi lam viec: ')
-    with open('setInfo.txt', 'w') as f:
-        f.write(f'Ten: {name}\nTuoi: {age}\nEmail: {email}\nSkype: {skype}\nDia chi: {address}\nNoi lam viec: {workplace}')
+def add_element_to_tuple(_tuple, element, position):
+    new_tuple = _tuple[:position] + (element,) + _tuple[position:]
+    return new_tuple
+
+_tuple = ('a', 'b', 'd', 'e')
+_new_tuple = add_element_to_tuple(_tuple, 'c', 2)
 
 
-def read_personal_info():
-    with open('setInfo.txt', 'r') as f:
-        content = f.read()
-    print(content)
+def remove_duplicates(_tuple):
+    new_tuple = tuple(x for x in _tuple if _tuple.count(x) == 1)
+    return new_tuple
+
+_tuple = ('ab', 'b', 'e', 'c', 'd', 'e', 'ab')
+_new_tuple_2 = remove_duplicates(_tuple)
 
 
-def count_words_in_file():
-    with open('demo_file2.txt', 'r') as f:
-        text = f.read()
-    words = text.split()
-    word_count = {}
-    for word in words:
-        word_count[word] = word_count.get(word, 0) + 1
-    return word_count
+def remove_duplicates_keep_order(_tuple):
+    seen = set()
+    new_tuple = []
+    for item in _tuple:
+        if item not in seen:
+            seen.add(item)
+            new_tuple.append(item)
+    return tuple(new_tuple)
 
-
-# Gọi các hàm
-save_personal_info()
-read_personal_info()
-word_count_result = count_words_in_file()
-print(word_count_result)
+_new_tuple_3 = remove_duplicates_keep_order(_tuple)

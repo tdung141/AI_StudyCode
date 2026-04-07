@@ -1,0 +1,11 @@
+{
+  "title": "Kiem tra muc do trung lap code",
+  "summary": "Tool kiểm tra mức độ trùng lặp code giữa hai thư mục sản phẩm.",
+  "explanation": "Tool này sẽ so sánh mã nguồn trong hai thư mục và tính toán tỷ lệ phần trăm trùng lặp. Nó cũng sẽ đánh giá cách giải quyết và cách viết code của hai sản phẩm.",
+  "code": "import os\nimport difflib\n\n\ndef get_code_files(directory):\n    code_files = []\n    for root, dirs, files in os.walk(directory):\n        for file in files:\n            if file.endswith('.py'):\n                code_files.append(os.path.join(root, file))\n    return code_files\n\n\ndef read_file(file_path):\n    with open(file_path, 'r', encoding='utf-8') as file:\n        return file.read()\n\n\ndef calculate_similarity(code1, code2):\n    seq = difflib.SequenceMatcher(None, code1, code2)\n    return seq.ratio() * 100\n\n\ndef compare_code_directories(dir1, dir2):\n    files1 = get_code_files(dir1)\n    files2 = get_code_files(dir2)\n    total_similarity = 0\n    count = 0\n\n    for file1 in files1:\n        for file2 in files2:\n            code1 = read_file(file1)\n            code2 = read_file(file2)\n            similarity = calculate_similarity(code1, code2)\n            total_similarity += similarity\n            count += 1\n            print(f'Trung lap giua {file1} va {file2}: {similarity:.2f}%')\n\n    if count > 0:\n        average_similarity = total_similarity / count\n        print(f'Trung lap trung binh: {average_similarity:.2f}%')\n    else:\n        print('Khong co file de so sanh.')\n\n\n# Vi du su dung\n# compare_code_directories('duong_dan_thu_muc_1', 'duong_dan_thu_muc_2')",
+  "sample_run": "Goi ham compare_code_directories('path/to/product1', 'path/to/product2')",
+  "notes": [
+    "Chua xu ly truong hop khong co file Python",
+    "Can kiem tra truong hop chia cho 0"
+  ]
+}

@@ -2,18 +2,20 @@
 
 ## Tom tat
 
-Chương trình nhập thông tin cá nhân và lưu vào file, sau đó đọc lại thông tin. Đếm số lượng từ trong file.
+Bài 1 thêm phần tử vào tuple, Bài 2 loại bỏ phần tử giống nhau, Bài 3 loại bỏ trùng lặp trong tuple.
 
 ## Giai thich
 
-Chương trình đầu tiên sẽ yêu cầu người dùng nhập các thông tin cá nhân và lưu chúng vào file 'setInfo.txt'. Chương trình thứ hai sẽ đọc nội dung từ file 'demo_file2.txt' và đếm số lần xuất hiện của từng từ.
+Bài 1 sử dụng phép nối tuple để thêm phần tử. Bài 2 và Bài 3 sử dụng hàm count để xử lý các phần tử trong tuple.
 
 ## Vi du chay
 
-Nhap ten: John\nNhap tuoi: 30\nNhap email: john@example.com\nNhap skype: john_skype\nNhap dia chi: 123 Main St\nNhap noi lam viec: Company XYZ\nTen: John\nTuoi: 30\nEmail: john@example.com\nSkype: john_skype\nDia chi: 123 Main St\nNoi lam viec: Company XYZ\n{'Dem': 1, 'so': 1, 'luong': 1, 'tu': 1, 'xuat': 1, 'hien': 1, 'abc': 3, '12': 2, 'it': 2, 'dnu': 1, 'eaut': 1}
+_new_tuple = ('a', 'c', 'd', 'e')
+_new_tuple_2 = ('b', 'c', 'd')
+_new_tuple_3 = ('ab', 'b', 'e', 'c', 'd')
 
 ## Ghi chu
 
-- Chương trình yêu cầu nhập thông tin từ người dùng.
-- File 'setInfo.txt' sẽ chứa thông tin cá nhân.
-- File 'demo_file2.txt' cần có sẵn để đếm từ.
+- Bài 1: Thêm phần tử vào tuple
+- Bài 2: Loại bỏ phần tử giống nhau
+- Bài 3: Loại bỏ trùng lặp nhưng giữ thứ tự
